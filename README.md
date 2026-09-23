@@ -52,15 +52,9 @@ checked file and a report.
 - **A toolchain** of about two dozen scripts behind one command, `lc`: it places every cut edge in
   silence, and it refuses to render until a set of checks is clean.
 
-```mermaid
-flowchart LR
-    A["Raw take"] --> B["lc intake<br/>transcribe once,<br/>measure every word"]
-    B --> C["Editorial read<br/>readers, verifiers,<br/>completeness critic"]
-    C --> D["lc mkcuts, lc rebuild<br/>cut list, EDL,<br/>gaps, captions"]
-    D --> E["Checks and the<br/>delivered read"]
-    E --> F["lc render<br/>three gates, render,<br/>six-pass QC gate"]
-    F --> G["Checked file<br/>and a report"]
-```
+<p align="center">
+  <img src="docs/assets/workflow.svg" alt="How it works: 1 raw take, 2 lc intake, 3 editorial read, 4 lc mkcuts and lc rebuild, 5 the checks and a read of the delivered cut, 6 lc render with three gates and the six-pass QC gate, 7 a checked file and a report" width="100%">
+</p>
 
 The QC gate's six passes cover the transcript, the caption data, the caption pixels, the video
 frames, the audio and the file spec. [Chapter 12 of the guide](GUIDE.md#12-the-checks-and-what-each-one-alone-can-see)
@@ -68,7 +62,7 @@ says what each one catches and why each exists.
 
 ## What it needs
 
-| | |
+| Requirement | Notes |
 |---|---|
 | **Claude Code** | runs the plugin and its agents |
 | **ffmpeg and ffprobe, with libass** | burns the captions. macOS: `brew install ffmpeg-full` (the plain `ffmpeg` formula has no libass). Debian or Ubuntu: `sudo apt install ffmpeg` |
@@ -239,14 +233,14 @@ render; `lc render` refuses it until then. See [CHANGELOG.md](CHANGELOG.md).
 
 ## What is in the box
 
-| | |
+| Path | What it holds |
 |---|---|
 | `skills/lesson-cut/` | the method: the spine, how to decide what gets cut, five reference files, a brief template and a workflow script |
 | `agents/` | the window reader, the adversarial verifier and the completeness critic |
 | `commands/` | `/cut-lesson`, `/lesson-doctor` |
 | `scripts/` | `lc` and the toolchain: measure, cut, tighten, check, caption, render, gate; `setup.sh` and the doctor |
 | `GUIDE.md` | the full manual: every command, file, setting, check and failure mode |
-| `docs/` | the guide as a PDF, `docs/build/`, which makes it from GUIDE.md, and the banner above |
+| `docs/` | the guide as a PDF, `docs/build/`, which makes it from GUIDE.md, and the two images on this page |
 | `requirements.txt` | the Python packages `setup.sh` installs |
 | `.claude-plugin/` | the plugin and marketplace manifests |
 | `CHANGELOG.md` | what changed in each version |

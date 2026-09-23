@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+<title id="t">How lesson-cut works</title>
+<desc id="d">1 raw take, 2 lc intake, 3 editorial read, 4 lc mkcuts and lc rebuild, 5 the checks and a read of the delivered cut, 6 lc render with three gates and the six-pass QC gate, 7 a checked file and a report.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C1439"/><stop offset="1" stop-color="#111E4F"/></linearGradient>
+  <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#009DB0"/><stop offset="1" stop-color="#00ABAB"/></linearGradient>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ABAB"/></marker>
+</defs>
+<rect width="1280" height="360" rx="28" fill="url(#bg)"/>
+<text x="56" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#6F86B8">HOW IT WORKS</text>
+<rect x="48" y="58" width="262" height="96" rx="14" fill="#141F52" stroke="#00ABAB" stroke-opacity="0.55" stroke-width="1.5"/>
+<circle cx="78" cy="88" r="14" fill="url(#teal)"/>
+<text x="78" y="93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">1</text>
+<text x="102" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Raw take</text>
+<text x="68" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B6DCE9">30 to 90 minutes, screen or camera</text>
+<rect x="350" y="58" width="262" height="96" rx="14" fill="#141F52" stroke="#00ABAB" stroke-opacity="0.55" stroke-width="1.5"/>
+<circle cx="380" cy="88" r="14" fill="url(#teal)"/>
+<text x="380" y="93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">2</text>
+<text x="404" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">lc intake</text>
+<text x="370" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B6DCE9">transcribe once, measure each word</text>
+<rect x="652" y="58" width="262" height="96" rx="14" fill="#141F52" stroke="#00ABAB" stroke-opacity="0.55" stroke-width="1.5"/>
+<circle cx="682" cy="88" r="14" fill="url(#teal)"/>
+<text x="682" y="93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">3</text>
+<text x="706" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Editorial read</text>
+<text x="672" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B6DCE9">readers, verifiers, a critic</text>
+<rect x="954" y="58" width="262" height="96" rx="14" fill="#141F52" stroke="#00ABAB" stroke-opacity="0.55" stroke-width="1.5"/>
+<circle cx="984" cy="88" r="14" fill="url(#teal)"/>
+<text x="984" y="93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">4</text>
+<text x="1008" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">lc mkcuts, lc rebuild</text>
+<text x="974" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B6DCE9">cut list, EDL, gaps, captions</text>
+<rect x="954" y="214" width="262" height="96" rx="14" fill="#141F52" stroke="#00ABAB" stroke-opacity="0.55" stroke-width="1.5"/>
+<circle cx="984" cy="244" r="14" fill="url(#teal)"/>
+<text x="984" y="249" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">5</text>
+<text x="1008" y="250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">The checks</text>
+<text x="974" y="288" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B6DCE9">and a read of the delivered cut</text>
+<rect x="652" y="214" width="262" height="96" rx="14" fill="#141F52" stroke="#00ABAB" stroke-opacity="0.55" stroke-width="1.5"/>
+<circle cx="682" cy="244" r="14" fill="url(#teal)"/>
+<text x="682" y="249" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">6</text>
+<text x="706" y="250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">lc render</text>
+<text x="672" y="288" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B6DCE9">three gates, render, six-pass QC</text>
+<rect x="350" y="214" width="262" height="96" rx="14" fill="url(#teal)" stroke="#00ABAB" stroke-opacity="0" stroke-width="1.5"/>
+<circle cx="380" cy="244" r="14" fill="#0C1439"/>
+<text x="380" y="249" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">7</text>
+<text x="404" y="250" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Checked file</text>
+<text x="370" y="288" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" fill="#E9F4F4">and a report; nothing uploaded</text>
+<line x1="316" y1="106.0" x2="342" y2="106.0" stroke="#00ABAB" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="618" y1="106.0" x2="644" y2="106.0" stroke="#00ABAB" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="920" y1="106.0" x2="946" y2="106.0" stroke="#00ABAB" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="1085.0" y1="160" x2="1085.0" y2="206" stroke="#00ABAB" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="948" y1="262.0" x2="922" y2="262.0" stroke="#00ABAB" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="646" y1="262.0" x2="620" y2="262.0" stroke="#00ABAB" stroke-width="2" marker-end="url(#arr)"/>
+<text x="56" y="256" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8C9AC6">The judgement is yours and Claude's;</text>
+<text x="56" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#8C9AC6">the tools make each cut exact.</text>
+</svg>
