@@ -1,0 +1,21 @@
+{
+  "name": "lesson-cut",
+  "owner": {
+    "name": "Mohamed Khair Arabi",
+    "url": "https://aiwithmo.com"
+  },
+  "plugins": [
+    {
+      "name": "lesson-cut",
+      "source": "./",
+      "description": "Cut a long recorded lesson down to a tight delivered video: retakes, repeated sections, dead air and spoken editor instructions removed, captions burned, every check run before the render.",
+      "homepage": "https://github.com/mohamed-arabi16/lesson-cut",
+      "repository": "https://github.com/mohamed-arabi16/lesson-cut",
+      "license": "MIT"
+    }
+  ],
+  "metadata": {
+    "description": "One plugin: lesson-cut, which cuts a long recorded lesson down to a tight, captioned, gated video.",
+    "version": "1.2.0"
+  }
+}

@@ -1,0 +1,40 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets never live in this tree (the key goes in ~/.lesson-cut/env)
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+docs/build/guide.html
+node_modules/
+# Fonts for the PDF build are licensed separately and never ship
+docs/build/fonts/
+
+# OS and editor clutter
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Takes, renders and audio never belong in the plugin: every install copies the
+# whole repo. A media file that is meant to ship needs `git add -f`.
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.m4a
+*.wav

@@ -1,0 +1,125 @@
+#!/usr/bin/env bash
+# lc - the one entry point to the lesson-cut toolchain.
+#
+# The tools live in this plugin and the project lives somewhere else, so every
+# run needs three things set before python starts: the edit directory (exported
+# as LC_EDIT_DIR, which lcenv.py reads), the working directory (the tools write
+# their artifacts relative to it), and PYTHONPATH (so `from cutlist import
+# SPEECH_CUTS` finds the PROJECT's cut list and not something in the plugin).
+#
+#   lc doctor                     what is missing on this machine
+#   lc init <dir> --source <vid>  scaffold a project around a take
+#   lc intake                     probe, transcribe once, measure word extents
+#   lc rebuild                    cutlist.py -> edl.json -> tightened -> captions
+#   lc render                     gated render at the source's resolution, then stop
+#   lc <tool> [args...]           any tool in this plugin, run against the edit dir
+#   lc tools                      list them
+#
+# Run it from the project directory or from its edit/ directory; --project
+# <dir> overrides, and so does LC_EDIT_DIR.
+set -uo pipefail
+
+# Resolve symlinks first, so a link to lc on the PATH still finds its tools.
+_src="${BASH_SOURCE[0]}"
+while [ -L "$_src" ]; do
+  _dir="$(cd "$(dirname "$_src")" && pwd)"; _src="$(readlink "$_src")"
+  case "$_src" in /*) ;; *) _src="$_dir/$_src" ;; esac
+done
+HERE="$(cd "$(dirname "$_src")" && pwd)"
+# The venv setup.sh builds lives in ~/.lesson-cut/venv, OUTSIDE the plugin.
+# It used to live in the plugin's own .venv, and that broke on install: Claude
+# Code copies a plugin into its cache, a virtualenv is not relocatable, and the
+# copied one silently fell back to the system python. A user-level location is
+# found by the clone and by the installed copy alike.
+ROOT="$(cd "$HERE/.." && pwd)"
+LC_HOME="${LESSON_CUT_HOME:-$HOME/.lesson-cut}"
+PY="${LC_PYTHON:-}"
+[ -n "$PY" ] || { [ -x "$LC_HOME/venv/bin/python" ] && PY="$LC_HOME/venv/bin/python" || PY="python3"; }
+
+die() { echo "lc: $*" >&2; exit 1; }
+
+# ---------------------------------------------------------------- edit dir --
+looks_like_edit_dir() {
+  [ -d "$1/transcripts" ] || [ -f "$1/cutlist.py" ] || [ -f "$1/project.json" ]
+}
+
+resolve_edit_dir() {
+  if [ -n "${LC_EDIT_DIR:-}" ]; then
+    # absolute, or a relative one is resolved again after the cd into it
+    [ -d "$LC_EDIT_DIR" ] || die "LC_EDIT_DIR is not a directory: $LC_EDIT_DIR"
+    (cd "$LC_EDIT_DIR" && pwd); return
+  fi
+  local d; d="$(pwd)"
+  looks_like_edit_dir "$d" && { echo "$d"; return; }
+  looks_like_edit_dir "$d/edit" && { echo "$d/edit"; return; }
+  die "no project here. Run this from a project (or its edit/ dir), or pass --project <dir>, or run 'lc init' first."
+}
+
+# --project <dir> may appear anywhere; pull it out before dispatch.
+ARGS=()
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --project) [ $# -ge 2 ] || die "--project needs a directory"
+               d="$2"; looks_like_edit_dir "$d/edit" && d="$d/edit"
+               [ -d "$d" ] || die "no such directory: $2"
+               looks_like_edit_dir "$d" || die "$2 is not a lesson-cut project (no edit/ with a transcript, cutlist.py or project.json)"
+               LC_EDIT_DIR="$(cd "$d" && pwd)"; shift 2 ;;
+    *) ARGS+=("$1"); shift ;;
+  esac
+done
+set -- ${ARGS+"${ARGS[@]}"}
+[ $# -ge 1 ] || { awk 'NR>1 && /^#/ {sub(/^# ?/,""); print; next} NR>1 {exit}' "${BASH_SOURCE[0]}"; exit 1; }
+
+CMD="$1"; shift
+
+case "$CMD" in
+  doctor)  # inside a project, the doctor checks that project's caption font
+           if [ -z "${LC_EDIT_DIR:-}" ]; then
+             for d in "$(pwd)" "$(pwd)/edit"; do
+               looks_like_edit_dir "$d" && { export LC_EDIT_DIR="$d"; break; }
+             done
+           fi
+           exec bash "$HERE/doctor.sh" "$@" ;;
+  init)    exec bash "$HERE/init.sh" "$@" ;;
+  tools)   echo "commands: doctor init intake rebuild render transcribe qc tools"
+           echo "tools:"
+           for f in "$HERE"/*.py; do b="$(basename "$f" .py)"
+             case "$b" in lcenv|render|transcribe_local) ;; *) echo "  $b" ;; esac; done; exit 0 ;;
+esac
+
+EDIT="$(resolve_edit_dir)" || exit 1
+CALLER="$(pwd)"
+FIXED=()
+for a in "$@"; do
+  case "$a" in
+    -*|.|/*) FIXED+=("$a") ;;
+    # a number is never a path, whatever files happen to exist
+    *[!0-9.]*) if [ -e "$CALLER/$a" ]; then FIXED+=("$CALLER/$a"); else FIXED+=("$a"); fi ;;
+    *) FIXED+=("$a") ;;
+  esac
+done
+set -- ${FIXED+"${FIXED[@]}"}
+export LC_EDIT_DIR="$EDIT"
+export PYTHONPATH="$EDIT${PYTHONPATH:+:$PYTHONPATH}"
+# An installed plugin lives in a cache Claude Code may replace on update;
+# keep python from writing __pycache__ into it.
+export PYTHONDONTWRITEBYTECODE=1
+export LC_PYTHON_RESOLVED="$PY"
+export LC_CALLER_DIR="$CALLER"      # where the user stands; render resolves --out against it
+cd "$EDIT" || die "cannot enter $EDIT"
+
+case "$CMD" in
+  intake)     exec bash "$HERE/intake.sh" "$@" ;;
+  render)     exec bash "$HERE/render-gated.sh" "$@" ;;
+  rebuild)    exec bash "$HERE/rebuild.sh" "$@" ;;
+  transcribe) exec "$PY" "$HERE/transcribe.py" "$@" ;;
+  qc)         exec "$PY" "$HERE/qc.py" "$@" ;;
+  *)
+    [ -f "$HERE/$CMD.py" ] || die "no tool named '$CMD'. 'lc tools' lists them."
+    case "$CMD" in
+      transcribe_local|grade) ;;
+      *) ls "$EDIT"/transcripts/*.json >/dev/null 2>&1 \
+           || die "no transcript in this project yet. Run 'lc intake' first." ;;
+    esac
+    exec "$PY" "$HERE/$CMD.py" "$@" ;;
+esac

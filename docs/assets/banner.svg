@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="472" viewBox="0 0 1280 472" role="img" aria-labelledby="t d">
+<title id="t">lesson-cut</title>
+<desc id="d">A raw take with retakes, dead air, a spoken delete-this instruction, a repeat and a filler struck out; the kept pieces join into one seamless delivered strip, with burned-in captions and a six-pass QC gate.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C1439"/><stop offset="1" stop-color="#111E4F"/></linearGradient>
+  <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#009DB0"/><stop offset="1" stop-color="#00ABAB"/></linearGradient>
+  <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#172150"/><line x1="0" y1="0" x2="0" y2="8" stroke="#2E3A70" stroke-width="3"/></pattern>
+</defs>
+<rect width="1280" height="472" rx="28" fill="url(#bg)"/>
+<text x="64" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="66" font-weight="800" fill="#FFFFFF" letter-spacing="-1">lesson-cut</text>
+<text x="66" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="25" fill="#B6DCE9">A long recorded lesson in. A tight, captioned, checked video out.</text>
+<text x="66" y="192" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#6F86B8">A Claude Code plugin</text>
+<text x="64" y="232" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#6F86B8">RAW TAKE</text>
+<text x="64" y="446" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#6F86B8">DELIVERED</text>
+<rect x="65.5" y="244" width="107" height="38" rx="7" fill="url(#teal)"/>
+<rect x="175.5" y="244" width="67" height="38" rx="7" fill="url(#hatch)" stroke="#2E3A70" stroke-width="1"/>
+<text x="209.0" y="304" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">retake</text>
+<rect x="245.5" y="244" width="147" height="38" rx="7" fill="url(#teal)"/>
+<rect x="395.5" y="244" width="87" height="38" rx="7" fill="url(#hatch)" stroke="#2E3A70" stroke-width="1"/>
+<text x="439.0" y="304" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">dead air</text>
+<rect x="485.5" y="244" width="117" height="38" rx="7" fill="url(#teal)"/>
+<rect x="605.5" y="244" width="77" height="38" rx="7" fill="url(#hatch)" stroke="#2E3A70" stroke-width="1"/>
+<text x="644.0" y="304" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">&quot;delete this&quot;</text>
+<rect x="685.5" y="244" width="92" height="38" rx="7" fill="url(#teal)"/>
+<rect x="780.5" y="244" width="82" height="38" rx="7" fill="url(#hatch)" stroke="#2E3A70" stroke-width="1"/>
+<text x="821.5" y="304" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">repeat</text>
+<rect x="865.5" y="244" width="137" height="38" rx="7" fill="url(#teal)"/>
+<rect x="1005.5" y="244" width="27" height="38" rx="7" fill="url(#hatch)" stroke="#2E3A70" stroke-width="1"/>
+<text x="1019.0" y="304" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">um</text>
+<rect x="1035.5" y="244" width="97" height="38" rx="7" fill="url(#teal)"/>
+<rect x="1135.5" y="244" width="79" height="38" rx="7" fill="url(#hatch)" stroke="#2E3A70" stroke-width="1"/>
+<text x="1175.0" y="304" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">dead air</text>
+<path d="M119.0,316 C119.0,345.0 119.0,345.0 119.0,374" fill="none" stroke="#00ABAB" stroke-opacity="0.4" stroke-width="1.5"/>
+<circle cx="119.0" cy="316" r="2.5" fill="#00ABAB" fill-opacity="0.7"/>
+<path d="M319.0,316 C319.0,345.0 249.0,345.0 249.0,374" fill="none" stroke="#00ABAB" stroke-opacity="0.4" stroke-width="1.5"/>
+<circle cx="319.0" cy="316" r="2.5" fill="#00ABAB" fill-opacity="0.7"/>
+<path d="M544.0,316 C544.0,345.0 384.0,345.0 384.0,374" fill="none" stroke="#00ABAB" stroke-opacity="0.4" stroke-width="1.5"/>
+<circle cx="544.0" cy="316" r="2.5" fill="#00ABAB" fill-opacity="0.7"/>
+<path d="M731.5,316 C731.5,345.0 491.5,345.0 491.5,374" fill="none" stroke="#00ABAB" stroke-opacity="0.4" stroke-width="1.5"/>
+<circle cx="731.5" cy="316" r="2.5" fill="#00ABAB" fill-opacity="0.7"/>
+<path d="M934.0,316 C934.0,345.0 609.0,345.0 609.0,374" fill="none" stroke="#00ABAB" stroke-opacity="0.4" stroke-width="1.5"/>
+<circle cx="934.0" cy="316" r="2.5" fill="#00ABAB" fill-opacity="0.7"/>
+<path d="M1084.0,316 C1084.0,345.0 729.0,345.0 729.0,374" fill="none" stroke="#00ABAB" stroke-opacity="0.4" stroke-width="1.5"/>
+<circle cx="1084.0" cy="316" r="2.5" fill="#00ABAB" fill-opacity="0.7"/>
+<rect x="64" y="380" width="715" height="38" rx="9" fill="url(#teal)"/>
+<line x1="174" y1="390" x2="174" y2="408" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1"/>
+<line x1="324" y1="390" x2="324" y2="408" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1"/>
+<line x1="444" y1="390" x2="444" y2="408" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1"/>
+<line x1="539" y1="390" x2="539" y2="408" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1"/>
+<line x1="679" y1="390" x2="679" y2="408" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1"/>
+<rect x="815" y="376" width="250" height="46" rx="10" fill="#060B24" fill-opacity="0.85" stroke="#2E3A70"/>
+<text x="940" y="407.0" text-anchor="middle" direction="rtl" font-family="'Geeza Pro', 'Noto Naskh Arabic', 'Segoe UI', Tahoma, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">الخطوة الأولى</text>
+<text x="940" y="446" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">captions burned in</text>
+<rect x="1083" y="376" width="133" height="46" rx="10" fill="none" stroke="#00ABAB" stroke-width="1.5"/>
+<text x="1149.5" y="406.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#00ABAB">QC 6/6 &#10003;</text>
+<text x="1149.5" y="446" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#8C9AC6">six-pass QC gate</text>
+</svg>

@@ -1,0 +1,11 @@
+# LF everywhere, whatever the platform's git defaults to: a CRLF checkout of lc
+# or a .sh script fails with "$'\r': command not found".
+* text=auto eol=lf
+
+# Binary, never normalised or diffed as text
+*.pdf binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.mov binary
