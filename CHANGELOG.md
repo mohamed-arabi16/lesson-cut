@@ -4,6 +4,12 @@ Versions follow MAJOR.MINOR.PATCH. The version lives in `.claude-plugin/plugin.j
 `metadata.version` in `.claude-plugin/marketplace.json`, line 3 of `GUIDE.md` and the PDF guide
 agree with it. An installed copy only updates when the version changes.
 
+## 1.2.1 - 2026-09-26
+
+- The repository moved to https://github.com/aiwithmo/lesson-cut. Install with
+  `/plugin marketplace add aiwithmo/lesson-cut`; the README, GUIDE.md, the PDF and both manifests
+  point there. GitHub redirects the old address, so an install made from it keeps updating.
+
 ## 1.2.0 - 2026-09-23
 
 The first public release. The versions below it were used privately and are summarised from their

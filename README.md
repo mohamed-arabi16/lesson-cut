@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img alt="version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-009DB0"></a>
+  <a href="CHANGELOG.md"><img alt="version 1.2.1" src="https://img.shields.io/badge/version-1.2.1-009DB0"></a>
   <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-0C1439">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-00ABAB"></a>
   <img alt="runs on macOS" src="https://img.shields.io/badge/runs%20on-macOS-4B5563">
@@ -99,7 +99,7 @@ transcript is cached. Local whisper costs only time.
 **1. Add the plugin**, in Claude Code:
 
 ```
-/plugin marketplace add mohamed-arabi16/lesson-cut
+/plugin marketplace add aiwithmo/lesson-cut
 /plugin install lesson-cut@lesson-cut
 ```
 
@@ -142,7 +142,7 @@ Arabic). `LESSON_CUT_HOME` moves `~/.lesson-cut` somewhere else.
 Clone it somewhere permanent and install from the folder:
 
 ```bash
-git clone https://github.com/mohamed-arabi16/lesson-cut ~/lesson-cut
+git clone https://github.com/aiwithmo/lesson-cut ~/lesson-cut
 bash ~/lesson-cut/scripts/setup.sh
 ```
 
@@ -217,7 +217,7 @@ switch an existing `lesson-cut` marketplace from a folder to GitHub, so remove i
 
 ```
 /plugin marketplace remove lesson-cut
-/plugin marketplace add mohamed-arabi16/lesson-cut
+/plugin marketplace add aiwithmo/lesson-cut
 /plugin install lesson-cut@lesson-cut
 ```
 

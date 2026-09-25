@@ -1,7 +1,7 @@
 # lesson-cut: the complete guide
 
-Version 1.2.0, 2026-09-23. Author: Mohamed Khair Arabi. MIT licensed.
-Repository: https://github.com/mohamed-arabi16/lesson-cut
+Version 1.2.1, 2026-09-26. Author: Mohamed Khair Arabi. MIT licensed.
+Repository: https://github.com/aiwithmo/lesson-cut
 
 This is the manual for the lesson-cut plugin for Claude Code. It is written for two readers at
 once: a person who wants to understand what the plugin does and how to use it, and an AI agent that
@@ -110,7 +110,7 @@ Linux, copy them to `~/.local/share/fonts` and run `fc-cache -f`. Any font you s
 In Claude Code:
 
 ```
-/plugin marketplace add mohamed-arabi16/lesson-cut
+/plugin marketplace add aiwithmo/lesson-cut
 /plugin install lesson-cut@lesson-cut
 ```
 
@@ -141,7 +141,7 @@ running old code and then breaks.
 For contributors, or anyone who wants the repository in a folder of their own:
 
 ```bash
-git clone https://github.com/mohamed-arabi16/lesson-cut ~/lesson-cut
+git clone https://github.com/aiwithmo/lesson-cut ~/lesson-cut
 bash ~/lesson-cut/scripts/setup.sh         # builds ~/.lesson-cut/venv, then runs the doctor
 ```
 
@@ -194,7 +194,7 @@ command refuses, because the source differs. Remove it first, then install as ab
 
 ```
 /plugin marketplace remove lesson-cut
-/plugin marketplace add mohamed-arabi16/lesson-cut
+/plugin marketplace add aiwithmo/lesson-cut
 /plugin install lesson-cut@lesson-cut
 ```
 
@@ -1166,7 +1166,7 @@ there. After a change, rebuild a real project and compare its `edl.json` and `ma
 previous version's before trusting it. A change that makes a check stricter is safer than one that
 makes it quieter.
 
-**Sharing**: point people at the repository, https://github.com/mohamed-arabi16/lesson-cut. It is
+**Sharing**: point people at the repository, https://github.com/aiwithmo/lesson-cut. It is
 the copy that gets updates, and section 3 installs from it.
 
 **Reporting a problem**: open an issue on the repository, with the `lc doctor` output

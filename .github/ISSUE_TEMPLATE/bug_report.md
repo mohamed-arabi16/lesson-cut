@@ -23,6 +23,6 @@ For a security problem, use the Security tab of this repository instead of an is
 ```
 ```
 
-**OS, and how you installed** (`/plugin marketplace add mohamed-arabi16/lesson-cut`, or a clone)
+**OS, and how you installed** (`/plugin marketplace add aiwithmo/lesson-cut`, or a clone)
 
 **lesson-cut version** (from `.claude-plugin/plugin.json`, or `/plugin` in Claude Code)
